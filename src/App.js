@@ -19,12 +19,20 @@ const list = [
   },
 ];
 
+class Developer {
+  constructor(firstname, lastname) {
+    this.firstname = firstname;
+    this.lastname = lastname;
+  }
+  getName() {
+    return this.firstname + ' ' + this.lastname;
+  }
+}
+const robin = new Developer('Robin', 'Wieruch');
+console.log(robin.getName());
+
 class App extends Component {
   render() {
-    const helloworld = {
-      welcome: 'Добро пожаловать ...',
-      you: 'Ты',
-    };
     return (
       <div className="App">
         {list.map(item => {
